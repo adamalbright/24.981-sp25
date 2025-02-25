@@ -1,8 +1,8 @@
-# File to count frequencies of segments in a file
+# File to count probabilities of bigrams in a file
 import sys
 
 celex_filename = "CelexLemmasInTranscription-DISC.txt"
-celex = open(celex_filename, 'rU')
+celex = open(celex_filename, 'r')
 
 output_filename = "CelexLemmasInTranscription-DISC.bigramprobs.txt"
 output = open(output_filename, 'w')
@@ -24,7 +24,7 @@ for lemma in lemmas:
 	# Add word boundaries
 	lemma = "#" + lemma + "#"
 	# Step through the lemma
-	for i in xrange(0, len(lemma)-1):
+	for i in range(0, len(lemma)-1):
 		# For each bigram, increase its count in the dictionary
 		current_bigram = lemma[i:i+2]
 		total_bigrams += 1

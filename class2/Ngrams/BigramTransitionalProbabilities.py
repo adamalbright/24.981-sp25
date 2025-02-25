@@ -2,7 +2,7 @@
 import sys
 
 celex_filename = "CelexLemmasInTranscription-DISC.txt"
-celex = open(celex_filename, 'rU')
+celex = open(celex_filename, 'r')
 
 output_filename = "CelexLemmasInTranscription-DISC.bigramtransprobs.txt"
 output = open(output_filename, 'w')
